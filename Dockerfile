@@ -6,4 +6,4 @@ RUN apt-get update -qq && apt-get install curl -y -qq && curl -sL https://deb.no
 RUN gem install --no-rdoc --no-ri compass foundation sass
 
 # install nodejs + tools
-RUN bash -c 'npm set progress=false' && bash -c 'npm install -g bower grunt-cli gulp-cli jira-cmd phantomjs-prebuilt utf-8-validate bufferutil optipng jpegtran pngquant gifsicle bufferutil jshint ycssmin recess selenium-standalone webdriver-manager' && selenium-standalone install --silent && webdriver-manager update
+RUN bash -c 'npm set progress=false' && bash -c 'npm install -g yarn bower grunt-cli gulp-cli jira-cmd phantomjs-prebuilt utf-8-validate bufferutil optipng jpegtran pngquant gifsicle bufferutil jshint ycssmin recess selenium-standalone webdriver-manager' && selenium-standalone install --silent && webdriver-manager update
