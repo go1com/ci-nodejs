@@ -20,7 +20,6 @@ RUN apk add --no-cache --virtual .build-deps \
 	ca-certificates \
 	coreutils \
 	curl \
-	git \
 	openssh-client \
 	python \
 	ruby \
