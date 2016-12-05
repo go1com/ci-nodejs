@@ -18,7 +18,9 @@ RUN apk add --no-cache --virtual .build-deps \
 && apk add --no-cache \
 	bash \
 	ca-certificates \
+	coreutils \
 	curl \
+	openssh-client \
 	python \
 	ruby \
 	ruby-dev \
