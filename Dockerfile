@@ -5,7 +5,7 @@ RUN apt-get update -qq \
     && curl -sL https://deb.nodesource.com/setup_6.x | bash - \
     && apt-get update -qq \
     && apt-get upgrade -y \
-    && apt-get install -y -qq ruby-dev make nodejs python g++ build-essential python-software-properties git-core libfontconfig \
+    && apt-get install -y -qq ruby-dev make nodejs python g++ build-essential python-software-properties git-core libfontconfig gettext \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
