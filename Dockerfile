@@ -16,6 +16,6 @@ RUN gem install --no-rdoc --no-ri compass foundation sass
 
 # install nodejs + tools
 RUN bash -c 'npm set progress=false' \
-    && bash -c 'npm install -g bower yarn grunt-cli gulp-cli jira-cmd phantomjs-prebuilt utf-8-validate bufferutil optipng jpegtran pngquant gifsicle bufferutil jshint ycssmin recess selenium-standalone webdriver-manager imagemin imagemin-gifsicle imagemin-jpegtran imagemin-optipng imagemin-pngquant optipng-bin jpegtran-bin newman nightmare mocha' \
+    && bash -c 'npm install -g bower yarn grunt-cli gulp-cli jira-cmd phantomjs-prebuilt utf-8-validate bufferutil optipng jpegtran pngquant gifsicle bufferutil jshint ycssmin recess selenium-standalone webdriver-manager imagemin imagemin-gifsicle imagemin-jpegtran imagemin-optipng imagemin-pngquant optipng-bin jpegtran-bin newman nightmare mocha typescript' \
     && selenium-standalone install --silent \
     && webdriver-manager update
