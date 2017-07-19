@@ -5,9 +5,11 @@ RUN apt-get update -qq \
     && curl -sL https://deb.nodesource.com/setup_6.x | bash - \
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
+    && curl -sS https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google.list' \
     && apt-get update -qq \
     && apt-get upgrade -y \
-    && apt-get install -y -qq ruby-dev make nodejs python g++ build-essential python-software-properties git-core libfontconfig gettext default-jre \
+    && apt-get install -y -qq ruby-dev make nodejs python g++ build-essential python-software-properties git-core libnss3 libfontconfig gettext default-jre google-chrome-stable \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
