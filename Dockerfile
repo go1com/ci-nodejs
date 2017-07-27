@@ -1,9 +1,9 @@
 FROM node:alpine
 
-ENV MODULES_DEPS ruby-dev libffi-dev build-base
+ENV MODULES_DEPS ruby-dev libffi-dev
 
 RUN set -xe \
-    && apk add --no-cache --update -q ruby bash git openssh-client chromium autoconf \
+    && apk add --no-cache --update -q ruby bash git openssh-client chromium build-base autoconf \
     && apk add --no-cache --update --virtual .gem-deps $MODULES_DEPS \
     && npm config set -g progress false \
     && yarn config set yarn-offline-mirror /cache/npm-packages-offline-cache \
