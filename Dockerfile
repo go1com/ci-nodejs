@@ -3,7 +3,7 @@ FROM node:alpine
 ENV MODULES_DEPS ruby-dev libffi-dev
 
 RUN set -xe \
-    && apk add --no-cache --update -q ruby automake bash git nasm openssh-client chromium build-base autoconf zlib zlib-dev libpng libpng-dev libjpeg-turbo libjpeg-turbo-dev \
+    && apk add --no-cache --update -q ruby automake bash git nasm openssh-client chromium build-base autoconf zlib zlib-dev libpng libpng-dev libjpeg-turbo libjpeg-turbo-dev gettext \
     && apk add --no-cache --update --virtual .gem-deps $MODULES_DEPS \
     && npm config set -g progress false \
     && yarn config set yarn-offline-mirror /cache/npm-packages-offline-cache \
