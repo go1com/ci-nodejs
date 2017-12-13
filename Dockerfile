@@ -9,7 +9,7 @@ RUN apt-get update -qq \
     && curl -sS https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
     && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google.list \
     && apt-get update -qq \
-    && apt-get install -y -qq ruby-dev make nodejs python g++ build-essential python-software-properties git-core libnss3 libfontconfig gettext default-jre google-chrome-stable firefox \
+    && apt-get install -y -qq ruby-dev make nodejs python g++ build-essential python-software-properties git-core libnss3 libfontconfig gettext default-jre google-chrome-beta chromium-chromedriver firefox \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
